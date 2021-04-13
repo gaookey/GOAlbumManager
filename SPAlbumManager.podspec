@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name           = "SPAlbumManager"
-  spec.version        = "1.0.0"
+  spec.version        = "1.0.1"
   spec.summary        = "A simple camera operation management class."
   spec.homepage       = "https://github.com/swiftprimer/SPAlbumManager"
   spec.license        = "MIT"

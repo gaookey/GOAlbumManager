@@ -8,9 +8,9 @@
 import UIKit
 import Photos
 
-@objcMembers class SPAlbumManager {
+public class SPAlbumManager {
     
-    @objc public enum MediaType: Int {
+    public enum MediaType: Int {
         case image
         case livePhoto
         case imageAndLivePhoto
@@ -23,7 +23,7 @@ import Photos
     public var mediaType = MediaType.image
     public var albums = [SPAlbum]()
     
-    static let shared = SPAlbumManager()
+    static public let shared = SPAlbumManager()
     
     private init() { }
 }

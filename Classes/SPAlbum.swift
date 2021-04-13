@@ -8,7 +8,7 @@
 import UIKit
 import Photos
 
-@objcMembers class SPAlbum: NSObject {
+public class SPAlbum: NSObject {
     
     public var collection = PHAssetCollection()
     public var type = SPAlbumManager.MediaType.image

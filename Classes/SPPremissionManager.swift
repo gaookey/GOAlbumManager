@@ -8,15 +8,15 @@
 import UIKit
 import Photos
 
-@objcMembers class SPPremissionManager {
-            
-    @objc public enum SPAlbumPremissionState: Int {
+public class SPPremissionManager {
+    
+    public enum SPAlbumPremissionState: Int {
         case authorized
         case unauthorized
         case limited
     }
     
-    static let shared = SPPremissionManager()
+    static public let shared = SPPremissionManager()
     
     private init() { }
     

@@ -8,9 +8,9 @@
 import UIKit
 import Photos
 
-@objcMembers public class SPAlbumOptions {
+public class SPAlbumOptions {
     
-    static let shared = SPAlbumOptions()
+    static public let shared = SPAlbumOptions()
     
     private init() { } 
     

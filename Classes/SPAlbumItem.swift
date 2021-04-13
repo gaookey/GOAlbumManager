@@ -8,7 +8,7 @@
 import UIKit
 import Photos
 
-@objcMembers class SPAlbumItem: NSObject {
+public class SPAlbumItem: NSObject {
     
     public var requestId: PHImageRequestID = 0
     public var asset = PHAsset()
