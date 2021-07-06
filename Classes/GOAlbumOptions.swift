@@ -1,6 +1,6 @@
 //
-//  SPAlbumOptions.swift
-//  SPAlbumManager
+//  GOAlbumOptions.swift
+//  GOAlbumManager
 //
 //  Created by 高文立 on 2021/4/13.
 //
@@ -8,9 +8,9 @@
 import UIKit
 import Photos
 
-public class SPAlbumOptions {
+public class GOAlbumOptions {
     
-    static public let shared = SPAlbumOptions()
+    static public let shared = GOAlbumOptions()
     
     private init() { } 
     

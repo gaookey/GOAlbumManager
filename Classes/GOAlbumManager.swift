@@ -1,6 +1,6 @@
 //
-//  SPAlbumManager.swift
-//  SPAlbumManager
+//  GOAlbumManager.swift
+//  GOAlbumManager
 //
 //  Created by 高文立 on 2021/4/13.
 //
@@ -8,7 +8,7 @@
 import UIKit
 import Photos
 
-public class SPAlbumManager {
+public class GOAlbumManager {
     
     public enum MediaType: Int {
         case image
@@ -21,17 +21,17 @@ public class SPAlbumManager {
     }
     
     public var mediaType = MediaType.image
-    public var albums = [SPAlbum]()
+    public var albums = [GOAlbum]()
     
-    static public let shared = SPAlbumManager()
+    static public let shared = GOAlbumManager()
     
     private init() { }
 }
 
-extension SPAlbumManager {
+extension GOAlbumManager {
     
-    public func requestAlbum(completionHandler: ((_ albums: [SPAlbum]) -> ())?) {
-        SPPremissionManager.shared.album { (state) in
+    public func requestAlbum(completionHandler: ((_ albums: [GOAlbum]) -> ())?) {
+        GOPremissionManager.shared.album { (state) in
             if state == .unauthorized {
                 completionHandler?(self.albums)
                 return
@@ -46,12 +46,12 @@ extension SPAlbumManager {
         }
     }
     
-    private func getAllAlbums() -> [SPAlbum] {
+    private func getAllAlbums() -> [GOAlbum] {
         let results: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: PHFetchOptions())
         
         for index in 0..<results.count {
             let collection = results.object(at: index)
-            let album = SPAlbum(collection: collection, type: mediaType)
+            let album = GOAlbum(collection: collection, type: mediaType)
             
             if album.items.count > 0 && collection.assetCollectionSubtype.rawValue != 1000000201 {
                 albums.append(album)

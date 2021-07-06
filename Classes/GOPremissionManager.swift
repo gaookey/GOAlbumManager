@@ -1,6 +1,6 @@
 //
-//  SPPremissionManager.swift
-//  SPAlbumManager
+//  GOPremissionManager.swift
+//  GOAlbumManager
 //
 //  Created by 高文立 on 2021/4/13.
 //
@@ -8,7 +8,7 @@
 import UIKit
 import Photos
 
-public class SPPremissionManager {
+public class GOPremissionManager {
     
     public enum SPAlbumPremissionState: Int {
         case authorized
@@ -16,7 +16,7 @@ public class SPPremissionManager {
         case limited
     }
     
-    static public let shared = SPPremissionManager()
+    static public let shared = GOPremissionManager()
     
     private init() { }
     
