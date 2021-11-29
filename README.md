@@ -1,3 +1,3 @@
 # GOAlbumManager
-### 相机操作
+### 相册操作
 
